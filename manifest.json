@@ -8,7 +8,7 @@
     "theme_color": "#ffffff",
     "icons": [
       {
-        "src": "images/1.png",
+        "src": "images/profile.jpg",
         "type": "image/png",
         "sizes": "192x192"
       }
