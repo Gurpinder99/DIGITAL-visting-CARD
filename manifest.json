@@ -1,0 +1,16 @@
+{
+    "name": "Dr. jobanpreet singh",
+    "short_name": "Dr.jobanpreet Singh",
+    "description": "A brief description of your website",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#ffffff",
+    "icons": [
+      {
+        "src": "images/1.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      }
+    ]
+  }

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Popup</title>
+    <style>
+        /* Style for the popup */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Style for the close button */
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Images -->
+<div id="imageContainer">
+    <!-- 100 images are dynamically added here -->
+</div>
+
+<!-- Popup -->
+<div id="popup" class="popup">
+    <span class="close" onclick="hidePopup()">&times;</span>
+    <img id="popupImage" src="" alt="Popup Image">
+</div>
+
+<script>
+    // Array of image URLs (replace these with your actual image URLs)
+    var imageUrls = [
+        "assets (2)/asset 30.jpeg",
+        "image2.jpg",
+        // Add more image URLs here...
+    ];
+
+    // Function to create and add image elements to the image container
+    function createImages() {
+        var imageContainer = document.getElementById('imageContainer');
+        imageUrls.forEach(function(url) {
+            var img = document.createElement('img');
+            img.src = url;
+            img.alt = "Image";
+            img.onclick = function() {
+                showPopup(url);
+            };
+            imageContainer.appendChild(img);
+        });
+    }
+
+    // Function to display the popup with the clicked image
+    function showPopup(imageSrc) {
+        var popup = document.getElementById('popup');
+        var popupImage = document.getElementById('popupImage');
+        
+        // Set the source of the popup image
+        popupImage.src = imageSrc;
+
+        // Display the popup
+        popup.style.display = 'block';
+    }
+
+    // Function to hide the popup
+    function hidePopup() {
+        var popup = document.getElementById('popup');
+        
+        // Hide the popup
+        popup.style.display = 'none';
+    }
+
+    // Call the createImages function to create and add images to the container
+    createImages();
+</script>
+
+</body>
+</html>

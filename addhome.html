@@ -1,61 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add to Home Page</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
-        .container {
-            margin-top: 100px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Send WhatsApp Message Without Saving Number</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Add to Home Page</h1>
-        <p>Would you like to add this webpage to your home screen?</p>
-        <button id="addToHomeButton">Add to Home Screen</button>
-    </div>
 
-    <script>
-        // Check if the user is on a mobile device and the browser supports the "beforeinstallprompt" event
-        if ('serviceWorker' in navigator && 'beforeinstallprompt' in window) {
-            const addToHomeButton = document.getElementById('addToHomeButton');
+<h2>Send WhatsApp Message Without Saving Number</h2>
 
-            // Hide the button initially
-            addToHomeButton.style.display = 'none';
+<div>
+    <label for="whatsapp-number">WhatsApp Number:</label>
+    <input type="text" id="whatsapp-number" placeholder="Enter WhatsApp number (including country code)">
+</div>
 
-            // Listen for the "beforeinstallprompt" event
-            window.addEventListener('beforeinstallprompt', (event) => {
-                // Prevent the default prompt
-                event.preventDefault();
+<!-- <div>
+    <label for="message">Message:</label>
+    <textarea id="message" placeholder="Enter your message"></textarea>
+</div> -->
 
-                // Show the button
-                addToHomeButton.style.display = 'block';
+<div>
+    <button onclick="sendMessage()">Send Message</button>
+</div>
 
-                // Store the event for later use
-                let deferredPrompt = event;
+<script>
+function sendMessage() {
+    var number = document.getElementById('whatsapp-number').value;
+    // var message = document.getElementById('message').value;
 
-                // Handle the button click event
-                addToHomeButton.addEventListener('click', () => {
-                    // Show the install prompt
-                    deferredPrompt.prompt();
+    // Format the phone number
+    number = number.replace(/\D/g, '');
 
-                    // Wait for the user to respond to the prompt
-                    deferredPrompt.userChoice.then((choiceResult) => {
-                        // Reset the deferredPrompt
-                        deferredPrompt = null;
-                    });
-                });
-            });
-        } else {
-            // If service workers or beforeinstallprompt are not supported
-            console.error('Service workers or beforeinstallprompt are not supported.');
-        }
-    </script>
+    // Construct the WhatsApp message URL
+    var url = `https://wa.me/${number}?text=${encodeURIComponent("https://gurpinder99.github.io/DIGITAL-visting-CARD/")}`;
+
+    // Open a new window with the WhatsApp message URL
+    window.open(url, '_blank');
+}
+</script>
+
 </body>
 </html>
