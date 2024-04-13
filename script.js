@@ -4,8 +4,8 @@ var saveBtn = document.querySelector(".btn");
 saveBtn.addEventListener("click", function () {
   // Get the contact information from the website
   var contact = {
-    name: "Dr.Jobanpreet singh",
-    phone: "9781939291",
+    name: "Dr.Jobanpreet singh (Bohja)",
+    phone: "6284189955",
   
   };
   // create a vcard file
@@ -25,47 +25,14 @@ saveBtn.addEventListener("click", function () {
     // Array of image URLs (replace these with your actual image URLs)
     var imageUrls = [
     
-      "assets (2)/asset 2.jpeg",
-      "assets (2)/asset 3.jpeg",
-      "assets (2)/asset 4.jpeg",
-      "assets (2)/asset 5.jpeg",
-      "assets (2)/asset 6.jpeg", 
-      "assets (2)/asset 7.jpeg",
-      "assets (2)/asset 8.jpeg",
-      "assets (2)/asset 9.jpeg",
-      "assets (2)/asset 10.jpeg",
-      "assets (2)/asset 11.jpeg",
-     
-      "assets (2)/asset 12.jpeg",
-      "assets (2)/asset 13.jpeg",
-      "assets (2)/asset 14.jpeg",
-      "assets (2)/asset 15.jpeg",
-      "assets (2)/asset 16.jpeg", 
-      "assets (2)/asset 17.jpeg",
-      "assets (2)/asset 18.jpeg",
-      "assets (2)/asset 19.jpeg",
-      "assets (2)/asset 20.jpeg",
-      "assets (2)/asset 21.jpeg",
-      "assets (2)/asset 22.jpeg",
-      "assets (2)/asset 23.jpeg",
-      "assets (2)/asset 24.jpeg",
-      "assets (2)/asset 25.jpeg",
-      "assets (2)/asset 26.jpeg", 
-      "assets (2)/asset 27.jpeg",
-      "assets (2)/asset 28.jpeg",
-      "assets (2)/asset 29.jpeg",
-      "assets (2)/asset 30.jpeg",
-      "assets (2)/asset 31.jpeg",
-      "assets (2)/asset 32.jpeg",
-      "assets (2)/asset 33.jpeg",
-      "assets (2)/asset 34.jpeg",
-      "assets (2)/asset 35.jpeg",
-      "assets (2)/asset 36.jpeg", 
-      "assets (2)/asset 37.jpeg",
-      "assets (2)/asset 38.jpeg",
-      "assets (2)/asset 39.jpeg",
-      "assets (2)/asset 40.jpeg",
-      "assets (2)/asset 41.jpeg",
+      "bull/SUL.jpg",
+      "bull/abhi.jpg",
+      "bull/asvt.jpg",
+      "bull/RUS.jpg",
+      "bull/MUL.jpg",
+      "bull/SANTT.jpg",
+      "bull/NOORR.jpg",
+      
      
       // Add more image URLs here...
   ];
@@ -106,3 +73,5 @@ saveBtn.addEventListener("click", function () {
 
   // Call the createImages function to create and add images to the container
   createImages();
+
+

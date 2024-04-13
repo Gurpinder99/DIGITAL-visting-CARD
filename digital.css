@@ -160,6 +160,9 @@ padding-top: 20px;
 left: 50%;
 transform: translate(-50%);}
 
+
+
+
 #popup{ position: fixed; z-index: 100;}
 #popup img{width: 350px;}
 #imageContainer {
