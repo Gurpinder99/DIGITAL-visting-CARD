@@ -46,6 +46,7 @@ saveBtn.addEventListener("click", function () {
           img.alt = "Image";
           img.onclick = function() {
               showPopup(url);
+        
           };
           imageContainer.appendChild(img);
       });
@@ -66,12 +67,38 @@ saveBtn.addEventListener("click", function () {
   // Function to hide the popup
   function hidePopup() {
       var popup = document.getElementById('popup');
-      
+    
       // Hide the popup
       popup.style.display = 'none';
+     
+      
   }
 
   // Call the createImages function to create and add images to the container
   createImages();
 
 
+let payment= document.getElementById("payment")
+
+payment.addEventListener("click",()=>{
+
+    var popuppay = document.getElementById('popup-pay');
+    
+    
+    // Set the source of the popup image
+   
+
+    // Display the popup
+    popuppay.style.display = 'block';
+
+
+});
+    
+
+// Function to hide the popup
+function hidePopuppay() {
+    var popuppay = document.getElementById('popup-pay');
+    
+    // Hide the popup
+    popuppay.style.display = 'none';
+}
